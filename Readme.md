@@ -9,6 +9,7 @@ Connect to your Windows Virtual Desktop and obtain data about your environment (
 
 ## Parameter ClientId
   App Id (Azure Portal > Azure Active Directory > App registration)
+  How to create it: https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal
 
 ## Parameter ClientSecret
   The secret of the client Id
