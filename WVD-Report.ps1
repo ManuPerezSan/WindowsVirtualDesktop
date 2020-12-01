@@ -1,8 +1,9 @@
 ﻿Param(
     [Parameter(Mandatory=$true,Position=0)][String]$AzureTenantId,
     [Parameter(Mandatory=$true,Position=1)][String]$SubscriptionId,
-    [Parameter(Mandatory=$true,Position=1)][String]$ClientId,
-    [Parameter(Mandatory=$true,Position=1)][String]$ClientSecret
+    [Parameter(Mandatory=$true,Position=2)][String]$ClientId,
+    [Parameter(Mandatory=$true,Position=3)][String]$ClientSecret,
+    [Parameter(Mandatory=$false,Position=4)][String]$Outfile=".\WVD-Report.html"
 )
 
 # TO DO
@@ -330,14 +331,14 @@ h2 {
 }
 
 
-$hostpoolExport | ConvertTo-Html @convertParams | Out-file -FilePath .\WVDTool.html -Encoding ascii
-$hostpoolTemplatesExport  | ConvertTo-Html  | Out-file -FilePath .\WVDTool.html -Append -Encoding ascii
-$appsExport | ConvertTo-Html  | Out-file -FilePath .\WVDTool.html -Append -Encoding ascii
-$sessionhostsExport | ConvertTo-Html | Out-file -FilePath .\WVDTool.html -Append -Encoding ascii
-$connectedUsers | ConvertTo-Html  | Out-file -FilePath .\WVDTool.html -Append -Encoding ascii
+$hostpoolExport | ConvertTo-Html @convertParams | Out-file -FilePath $Outfile -Encoding ascii
+$hostpoolTemplatesExport  | ConvertTo-Html  | Out-file -FilePath $Outfile -Append -Encoding ascii
+$appsExport | ConvertTo-Html  | Out-file -FilePath $Outfile -Append -Encoding ascii
+$sessionhostsExport | ConvertTo-Html | Out-file -FilePath $Outfile -Append -Encoding ascii
+$connectedUsers | ConvertTo-Html  | Out-file -FilePath $Outfile -Append -Encoding ascii
 
 # Decode HTML to show base64 images correctly
-$a = Get-Content .\WVDTool.html
+$a = Get-Content $Outfile
 
 Add-Type -AssemblyName System.Web
-[System.Web.HttpUtility]::HtmlDecode($a) | Out-File .\WVDTool.html
+[System.Web.HttpUtility]::HtmlDecode($a) | Out-File $Outfile
