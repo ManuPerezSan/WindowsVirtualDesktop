@@ -6,12 +6,6 @@
     [Parameter(Mandatory=$false,Position=4)][String]$Outfile=".\WVD-Report.html"
 )
 
-# TO DO
-
-
-# [ ] Mostrar el origen de la imagen usada (source) y (name) en caso de image o SKU en caso de gallery
-# [ ] Adding style powershell html report: https://petri.com/adding-style-powershell-html-reports
-
 $totalSessions = 0
 $totalSessionHosts = 0
 
