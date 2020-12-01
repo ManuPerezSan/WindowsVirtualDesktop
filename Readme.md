@@ -14,10 +14,13 @@ Connect to your Windows Virtual Desktop and obtain data about your environment (
 ## Parameter ClientSecret
   The secret of the client Id
 
+## Outfile
+    The name of the output file file
 
 ## Requirements
   An Azure subscription with Azure Active Directory
   An App Id (App registration) with Reader role in the subscription
+  Powershell Az or AzureRM not required
 
 ## Output
     Save html report with name WVDTool.html in the same folder
