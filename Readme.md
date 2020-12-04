@@ -25,6 +25,6 @@ Connect to your Windows Virtual Desktop and obtain data about your environment (
 ## Output
     Save html report with name WVDTool.html in the same folder
 
-![image](https://user-images.githubusercontent.com/23212171/100673273-799c5700-3363-11eb-85e0-99dda0bf034d.png)
+![image](https://user-images.githubusercontent.com/23212171/101169441-367d0500-363d-11eb-807d-394380cc2680.png)
 
 ![image](https://user-images.githubusercontent.com/23212171/100673558-ef082780-3363-11eb-9e93-4fe6cc79cc01.png)
