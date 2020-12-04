@@ -13,8 +13,8 @@ Connect to your Windows Virtual Desktop and obtain data about your environment (
 
 ## Parameter ClientSecret
   The secret of the client Id
-
-## Outfile
+  
+## Parameter Outfile
     The name of the output file file
 
 ## Requirements
@@ -23,7 +23,7 @@ Connect to your Windows Virtual Desktop and obtain data about your environment (
   Powershell Az or AzureRM not required.
 
 ## Output
-    Save html report with name WVDTool.html in the same folder
+    Save html report with name WVD-Report.html (by default) in the same folder
 
 ![image](https://user-images.githubusercontent.com/23212171/101169441-367d0500-363d-11eb-807d-394380cc2680.png)
 
